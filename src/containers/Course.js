@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { course } from '../actions';
-import Course from '../components/Course';
+import Show from '../components/courses/Show';
 
 const mapStateToProps = (state) => {
   return {
@@ -16,9 +16,9 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
-const ConnectedCourse = connect(
+const Course = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Course);
+)(Show);
 
-export default ConnectedCourse;
+export default Course;

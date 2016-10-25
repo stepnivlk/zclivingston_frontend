@@ -1,4 +1,3 @@
-// External
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router'
@@ -10,13 +9,14 @@ import axios from 'axios';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-// Components
-import ConnectedCourse from './containers/ConnectedCourse';
+// Containers
+import Course from './containers/Course';
 import ConnectedApp from './containers/ConnectedApp';
-import Dashboard from './components/Dashboard';
 import NewCourse from './containers/NewCourse';
 import ConnectedCourses from './containers/ConnectedCourses';
 import ConnectedLogin from './containers/ConnectedLogin';
+// Components
+import Dashboard from './components/Dashboard';
 import Register from './components/Register';
 
 // Css
@@ -31,7 +31,10 @@ injectTapEventPlugin();
 axios.defaults.baseURL = 'http://localhost:3000/api/';
 
 // Inital store setup
-const store = createStore(rootReducer, applyMiddleware(thunk, logger()));
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunk, logger())
+);
 
 // Authorization
 const requireViewer = (nextState, replace) => { 
@@ -52,7 +55,7 @@ ReactDOM.render(
           <Route path="/admin" component={ConnectedApp} onEnter={requireViewer}>
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/courses" component={ConnectedCourses} />
-            <Route path="/courses/:id" component={ConnectedCourse} />
+            <Route path="/courses/:id" component={Course} />
             <Route path="/new_course" component={NewCourse} />
           </Route>
         </Route>
