@@ -6,6 +6,26 @@ import TimePicker from 'material-ui/TimePicker';
 import Slider from 'material-ui/Slider';
 
 export default class NewCourseThird extends Component {
+  handleStartDate = (e, date) => {
+    this.props.onStartDateChange(date.toISOString());
+  }
+
+  handleEndDate = (e, date) => {
+    this.props.onEndDateChange(date.toISOString());
+  }
+
+  handleStartTime = (e, time) => {
+    this.props.onStartTimeChange(time);
+  }
+
+  handleEndTime = (e, time) => {
+    this.props.onEndTimeChange(time);
+  }
+
+  handlePeriod = (e, period) => {
+    this.props.onPeriodChange(period);
+  }
+
   render() {
     return (
       <div>
@@ -13,12 +33,14 @@ export default class NewCourseThird extends Component {
           <div className='col-md-6 col-md-offset-1'>
             <DatePicker
               hintText="Start Date"
+              onChange={this.handleStartDate}
             />
           </div>
           <div className='col-md-4'>
             <TimePicker
               format="24hr"
               hintText="Start Time"
+              onChange={this.handleStartTime}
             />
           </div>
         </div>
@@ -26,6 +48,7 @@ export default class NewCourseThird extends Component {
           <div className='col-md-6 col-md-offset-1'>
             <DatePicker
               hintText="End Date"
+              onChange={this.handleEndDate}
             />
 
           </div>
@@ -33,6 +56,7 @@ export default class NewCourseThird extends Component {
             <TimePicker
               format="24hr"
               hintText="End Time"
+              onChange={this.handleEndTime}
             />
           </div>
         </div>

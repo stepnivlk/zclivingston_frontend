@@ -7,7 +7,12 @@ import {
   newCourseDesc,
   newCourseUser,
   newCourseNext,
-  newCoursePrev
+  newCoursePrev,
+  newCourseStartDate,
+  newCourseEndDate,
+  newCourseStartTime,
+  newCourseEndTime,
+  newCoursePeriod
 } from './newCourse';
 
 import { fetchUsers } from './users';
@@ -21,6 +26,11 @@ export {
   newCourseUser,
   newCourseNext,
   newCoursePrev,
+  newCourseStartDate,
+  newCourseEndDate,
+  newCourseStartTime,
+  newCourseEndTime,
+  newCoursePeriod,
   toggleDrawer,
   loginUser,
   currentUser,

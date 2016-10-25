@@ -50,7 +50,22 @@ export default class NewCourse extends Component {
                  name={this.props.name}
                />;
       case 2:
-        return <NewCourseThird />;
+        return <NewCourseThird
+                 onStartDateChange={this.props.onStartDateChange}
+                 onEndDateChange={this.props.onEndDateChange}
+                 onStartTimeChange={this.props.onStartTimeChange}
+                 onEndTimeChange={this.props.onEndTimeChange}
+                 onPeriodChange={this.props.onPeriodChange}
+                 startDate={this.props.start_date}
+                 endDate={this.props.end_date}
+                 startTime={this.props.start_time}
+                 endTime={this.props.end_time}
+                 period={this.props.period}
+               />;
+      case 4:
+        return 'four';
+      case 5:
+        return 'five';
       default:
         return 'something went wrong';
       }
