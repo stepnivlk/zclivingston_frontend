@@ -3,22 +3,14 @@ import { Link } from 'react-router';
 
 // Components
 import Loader from '../common/Loader';
-import Tag from '../common/Tag';
 import Info from './common/Info';
 import Attendance from './common/Attendance';
 
 // Material UI - components
-import CircularProgress from 'material-ui/CircularProgress';
-import { Card, CardHeader, CardText } from 'material-ui/Card';
 import { Tabs, Tab } from 'material-ui/Tabs';
-import Avatar from 'material-ui/Avatar';
-import { List, ListItem } from 'material-ui/List';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 
 // Material UI - styles
-import Alarm from 'material-ui/svg-icons/action/alarm';
-import ShoppingCart from 'material-ui/svg-icons/action/shopping-cart';
-import Group from 'material-ui/svg-icons/social/group';
 import Build from 'material-ui/svg-icons/action/build';
 import { transparent, cyan50 } from 'material-ui/styles/colors';
 
